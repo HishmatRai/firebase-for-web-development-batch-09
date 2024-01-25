@@ -1,16 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
     <script src="./../js/firebase.js"></script>
+    <style>
+        .loading {
+            display: block;
+        }
+
+        #container {
+            display: none
+        }
+    </style>
 </head>
+
 <body>
     <h1>Home Page</h1>
     <button onclick="logOutHandler()">Log Out</button>
+    <br />
+    <br />
+    <form onsubmit="addDataHandler();return false">
+        <input type="text" placeholder="Type something ..." required id="input" />
+        <input type="submit" value="Add">
+    </form>
+    <!-- <p class="loading" id="loading">Loading ...</p> -->
+    <img src="https://i.pinimg.com/originals/c7/e1/b7/c7e1b7b5753737039e1bdbda578132b8.gif" id="loading" class="loading"
+        height="100px" />
+    <div id="container">
+
+    </div>
 </body>
 <script src="./../js/home.js"></script>
+
 </html>
