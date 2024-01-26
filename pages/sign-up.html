@@ -7,12 +7,16 @@
     <title>Document</title>
     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
     <script src="./../js/firebase.js"></script>
 </head>
 
 <body>
     <h1>Sign Up</h1>
     <form onsubmit="signUpHandler();return false">
+        <input type="text" placeholder="First name" required id="firstName" />
+        <input type="text" placeholder="Last name" required id="lastName" />
+        <input type="number" placeholder="Phone Number" required id="phone" />
         <input type="email" placeholder="Email Address" required id="email" />
         <input type="password" placeholder="Password" required id="password" />
         <p id="message"></p>
