@@ -5,6 +5,7 @@ const firstName = document.getElementById("firstName")
 const lastName = document.getElementById("lastName")
 const phone = document.getElementById("phone")
 const signUpHandler = () => {
+    // 
     firebase.auth().createUserWithEmailAndPassword(email.value, password.value)
         .then((res) => {
             console.log(res.user);
@@ -16,7 +17,8 @@ const signUpHandler = () => {
                     lastName: lastName.value,
                     phone: phone.value,
                     email: email.value,
-                    password: password.value
+                    password: password.value,
+                    // profileImage: ""
                 })
                 setTimeout(() => {
                     window.location.assign("./email-verification.html")

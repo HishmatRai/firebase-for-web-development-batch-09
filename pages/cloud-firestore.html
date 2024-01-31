@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-firestore.js"></script>
+    <script src="./../js/firebase.js"></script>
+
+</head>
+
+<body>
+    <h1>Firestore Page</h1>
+    <form onsubmit="addData();return false">
+        <input type="text" placeholder="Type something ..." required id="input" />
+        <input type="submit" value="Add">
+    </form>
+</body>
+<script src="./../js/cloud-firestore.js"></script>
+
+</html>
