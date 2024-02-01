@@ -7,25 +7,21 @@
     <title>Document</title>
     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-storage.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-firestore.js"></script>
     <script src="./../js/firebase.js"></script>
-<style>
-    img{
-        width: 10px;
-        height: 10px;
-    }
-</style>
+
 </head>
 
 <body>
-    <h1>Firestore Page</h1>
-    <form onsubmit="addData();return false">
-        <input type="text" placeholder="Type something ..." required id="input" />
-        <input type="submit" value="Add">
+    <h1>Blog Page</h1>
+    <form onsubmit="createBlog();return false">
+        <input type="text" placeholder="Title" required id="title" />
+        <textarea placeholder="Details" id="details" required></textarea>
+        <input type="file" required onchange="fileUpload(event)" />
+        <input type="submit" value="Create Blog">
     </form>
-    <div id="container"></div>
 </body>
-<script src="./../js/cloud-firestore.js"></script>
+<script src="./../js/blog.js"></script>
 
 </html>
